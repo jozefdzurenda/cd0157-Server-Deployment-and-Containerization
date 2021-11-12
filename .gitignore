@@ -29,3 +29,9 @@ htmlcov/
 .direnv
 
 .github/**
+
+# AWS files
+iam-role-policy.json
+trust.json
+aws-auth-patch.yml
+githubtoken

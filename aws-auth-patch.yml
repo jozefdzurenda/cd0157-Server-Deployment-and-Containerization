@@ -1,25 +1,12 @@
-# This is a sample aws-auth-patch.yml file. 
-# Actual aws-auth-patch.yml will be created at /System/Volumes/Data/private/tmp/aws-auth-patch.yml path.
-
 apiVersion: v1
 data:
-  mapRoles: |
-    - groups:
-      - system:masters
-      rolearn: arn:aws:iam::644752792305:role/UdacityFlaskDeployCBKubectlRole
-      username: build      
-    - groups:
-      - system:bootstrappers
-      - system:nodes
-      rolearn: arn:aws:iam::644752792305:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-17C402QC9VF6L
-      username: system:node:{{EC2PrivateDNSName}}
-  mapUsers: |
-    []
+  mapRoles: "- groups:\n- system:masters\nrolearn: arn:aws:iam::815482982786:role/UdacityFlaskDeployCBKubectlRole\nusername:
+    build    \n- groups:\n  - system:bootstrappers\n  - system:nodes\n  rolearn: arn:aws:iam::815482982786:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-13EZ3NSYHIUD0\n
+    \ username: system:node:{{EC2PrivateDNSName}}\n"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2021-02-26T07:40:38Z"
+  creationTimestamp: "2021-11-12T12:31:24Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "5992"
-  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
-  uid: 5bf363cb-504c-4289-93ce-74257aff0de4
+  resourceVersion: "21042"
+  uid: 1a994e25-cc2f-4c07-9467-4f1f2459b368
